@@ -5,7 +5,7 @@
 ![Model](https://img.shields.io/badge/Architecture-EfficientNetB7-green)
 ![Accuracy](https://img.shields.io/badge/Accuracy-82%25-brightgreen)
 
-An automated deep learning solution designed to identify physical and electrical anomalies in solar panels. Using an EfficientNetB0 backbone, this system categorizes module health into 6 distinct classes, enabling predictive maintenance for sustainable energy infrastructure.
+An automated deep learning solution designed to identify physical and electrical anomalies in solar panels. Using an EfficientNetB7 backbone, this system categorizes module health into 6 distinct classes, enabling predictive maintenance for sustainable energy infrastructure.
 
 ## 🚀 Key Features
 - **EfficientNetB7 Architecture:** Optimized for high accuracy with low computational overhead.
