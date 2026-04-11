@@ -10,26 +10,24 @@ An automated deep learning solution designed to identify physical and electrical
 ## 🚀 Key Features
 - **EfficientNetB0 Architecture:** Optimized for high accuracy with low computational overhead.
 - **6-Class Diagnostics:** Identifies Bird-drop, Clean, Dusty, Electrical-damage, Physical-Damage, and Snow-Covered panels.
-- **Real-Time Interface:** Interactive dashboard for thermal and RGB module analysis.
+- **Real-Time Interface:** Interactive dashboard for RGB module analysis.
 - **Automated Recommendations:** Provides field-level maintenance advice based on detection results.
 
 ## 🖼️ Application Walkthrough
 
-### 1. Home Dashboard
-![Home](static/images/home.png)
-*Automated module inspection landing page with real-time telemetry standby.*
+| **Step 1: Home Page** | **Step 2: Module Upload** |
+|:---:|:---:|
+| ![Home](static/images/home.png) | ![Upload](static/images/upload.png) |
+| **Home Page** <br> Centralized control center for rapid module inspection and real-time telemetry monitoring. | **Module Upload** <br> Optimized drag-and-drop interface supporting high-resolution RGB imagery. |
 
-### 2. Module Upload
-![Upload](static/images/upload.png)
-*Intuitive drag-and-drop interface for uploading thermal or RGB module scans.*
+| **Step 3: AI Analysis** | **Step 4: Diagnostic Result** |
+|:---:|:---:|
+| ![Analysis](static/images/analysis.png) | ![Result](static/images/result.png) |
+| **AI Analysis** <br> Deep feature extraction using EfficientNetB0 to identify microscopic structural defects. | **Diagnostic Result** <br> Comprehensive impact reports featuring actionable maintenance protocols and confidence scoring. |
 
-### 3. AI Analysis
-![Analysis](static/images/analysis.png)
-*Processing visual feature vectors using the EfficientNetB0 inference engine.*
+---
 
-### 4. Diagnostic Result
-![Result](static/images/result.png)
-*Detailed yield impact assessment with maintenance recommendations and confidence metrics.*
+
 
 ## 📊 Model Performance
 | Category | Precision | Recall | F1-Score | Status |
