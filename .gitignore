@@ -1,0 +1,10 @@
+
+# Data & Models (Large files)
+Data/
+Test/
+
+# Enviroments
+.venv/
+
+# Python bytecode
+__pycache__/
