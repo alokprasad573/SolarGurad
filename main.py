@@ -83,5 +83,7 @@ def predict():
 
 if __name__ == '__main__':
     from waitress import serve
-    print("Starting production server on http://0.0.0.0:5000")
-    serve(app, host='0.0.0.0', port=5000)
+    # Get port from environment variable for Render, default to 5000 for local
+    port = int(os.environ.get('PORT', 5000))
+    print(f"Starting production server on http://0.0.0.0:{port}")
+    serve(app, host='0.0.0.0', port=port)
