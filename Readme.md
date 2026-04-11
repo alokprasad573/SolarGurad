@@ -2,13 +2,13 @@
 
 ![Solar Energy](https://img.shields.io/badge/Domain-Renewable%20Energy-orange)
 ![Deep Learning](https://img.shields.io/badge/Framework-TensorFlow-blue)
-![Model](https://img.shields.io/badge/Architecture-EfficientNetB0-green)
+![Model](https://img.shields.io/badge/Architecture-EfficientNetB7-green)
 ![Accuracy](https://img.shields.io/badge/Accuracy-82%25-brightgreen)
 
 An automated deep learning solution designed to identify physical and electrical anomalies in solar panels. Using an EfficientNetB0 backbone, this system categorizes module health into 6 distinct classes, enabling predictive maintenance for sustainable energy infrastructure.
 
 ## 🚀 Key Features
-- **EfficientNetB0 Architecture:** Optimized for high accuracy with low computational overhead.
+- **EfficientNetB7 Architecture:** Optimized for high accuracy with low computational overhead.
 - **6-Class Diagnostics:** Identifies Bird-drop, Clean, Dusty, Electrical-damage, Physical-Damage, and Snow-Covered panels.
 - **Real-Time Interface:** Interactive dashboard for RGB module analysis.
 - **Automated Recommendations:** Provides field-level maintenance advice based on detection results.
