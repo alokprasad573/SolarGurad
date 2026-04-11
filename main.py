@@ -11,7 +11,7 @@ from FixedDense import FixedDense
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
 # Load model once at startup for efficiency
-MODEL_PATH = './Model/effnet_0.82.h5'
+MODEL_PATH = './Model/effnet_B7_0.82.h5'
 if os.path.exists(MODEL_PATH):
     model = tf.keras.models.load_model(
         MODEL_PATH,
@@ -26,7 +26,7 @@ else:
 def index():
     return render_template('index.html')
 
-def analyze(img_path):
+def analyze(img):
     if model is None:
         return {"error": "Model not loaded"}
     
@@ -34,9 +34,8 @@ def analyze(img_path):
     img_wdt = 224
     class_names = ['Bird-drop', 'Clean', 'Dusty', 'Electrical-damage', 'Physical-Damage', 'Snow-Covered']
     
-    img = cv2.imread(img_path)
     if img is None:
-        return {"error": f"Could not load image at {img_path}"}
+        return {"error": "Invalid image data"}
 
     # 1. Convert BGR to RGB
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -71,13 +70,11 @@ def predict():
         return jsonify({'message': 'No selected file'})
 
     if file:
-        # Save file temporarily
-        temp_path = os.path.join('static', 'temp_upload.jpg')
-        if not os.path.exists('static'):
-            os.makedirs('static')
-        file.save(temp_path)
+        # Read file into memory and decode
+        file_bytes = np.frombuffer(file.read(), np.uint8)
+        img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
         
-        result = analyze(temp_path)
+        result = analyze(img)
         
         if "error" in result:
             return jsonify({'message': result["error"]})
