@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 from flask import Flask, render_template, jsonify, request
-from tensorflow.keras.applications.efficientnet import preprocess_input
+from keras.applications.efficientnet import preprocess_input
 from FixedDense import FixedDense
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
