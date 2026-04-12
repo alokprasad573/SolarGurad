@@ -11,7 +11,7 @@ from FixedDense import FixedDense
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
 # Load model once at startup for efficiency
-MODEL_PATH = './Model/effnet_B7_0.82.h5'
+MODEL_PATH = './Model/effnetV2B00.80.h5'
 if os.path.exists(MODEL_PATH):
     model = tf.keras.models.load_model(
         MODEL_PATH,
@@ -44,16 +44,14 @@ def analyze(img):
     img_resized = cv2.resize(img_rgb, (img_wdt, img_hgt))
     
     # 3. Preprocess
-    input_arr = np.expand_dims(img_resized, axis=0)
+    input_arr = np.expand_dims(img_resized, axis=0).astype('float32')
     input_arr = preprocess_input(input_arr)
     
     # 4. Make prediction
-    predictions = model.predict(input_arr)
-    score = tf.nn.softmax(predictions[0]).numpy()
-    
-    predicted_index = np.argmax(predictions[0])
-    predicted_class = class_names[predicted_index]
-    confidence = float(score[predicted_index])
+    predictions = model.predict(input_arr, verbose=0)
+    predicted_idx = np.argmax(predictions[0])
+    predicted_class = class_names[predicted_idx]
+    confidence = round(float(predictions[0][predicted_idx] * 100), 2)
     
     return {
         "class_name": predicted_class,

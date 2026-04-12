@@ -91,7 +91,7 @@
                 urgencyBadge.innerText = info.urgency;
                 urgencyBadge.className = `inline-block px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-3 ${info.color}`;
                 resultImage.src = imagePreview.src;
-                confidenceVal.innerText = ((data.confidence || 0) * 100).toFixed(1) + '%';
+                confidenceVal.innerText = (data.confidence || 0) + '%';
 
             } catch (error) {
                 loadingState.classList.add('hidden');
