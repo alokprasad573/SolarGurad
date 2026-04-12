@@ -3,9 +3,6 @@
 Data/
 Test/
 
-#Models
-Model/effnet_0.82.h5
-
 # Enviroments
 .venv/
 
