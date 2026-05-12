@@ -79,7 +79,7 @@ SolarGuard-Protecting-Every-Photon-with-AI/
 - **Deep Learning:** TensorFlow, Keras (EfficientNetV2B0 transfer learning)
 - **Computer Vision:** OpenCV, scikit-image
 - **Data Science:** NumPy, scikit-learn, Matplotlib
-- **Web Framework:** Flask, Waitress (production server)
+- **Web Framework:** Flask, waitress (production server)
 - **Frontend:** Tailwind CSS (CDN), Vanilla JS
 
 ## 🔧 Installation & Usage
