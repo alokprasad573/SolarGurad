@@ -93,7 +93,7 @@ SolarGuard-Protecting-Every-Photon-with-AI/
    ```
 3. **Run the application:**
    ```bash
-   python main.py
+   python app.py
    ```
    Open `http://localhost:5000` in your browser.
 
