@@ -85,7 +85,7 @@ SolarGuard-Protecting-Every-Photon-with-AI/
 ## 🔧 Installation & Usage
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/solar-defect-classification.git
+   git clone https://github.com/alokprasad573/solar-defect-classification.git
    ```
 2. **Setup environment:**
    ```bash
