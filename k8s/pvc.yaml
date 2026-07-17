@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: solarguard-model-pvc
+  namespace: solarguard
+  labels:
+    app: solarguard
+spec:
+  accessModes:
+    - ReadOnlyMany        # Multiple pods can read the same model weights
+  resources:
+    requests:
+      storage: 500Mi      # EfficientNetV2B0 weights are ~200 MB; 500 Mi gives headroom
+  storageClassName: standard  # Change to your cloud provider's class (e.g. gp2, premium-rwo)

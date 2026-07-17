@@ -1,0 +1,37 @@
+## Python artefacts
+__pycache__/
+*.py[cod]
+*.pyo
+
+## Virtual environments
+.venv/
+venv/
+env/
+
+## Large data – not needed inside the image
+Data/
+
+## Jupyter notebooks & test artefacts
+NoteBooks/
+Test/
+
+## Git metadata
+.git/
+.gitignore
+.gitattributes
+
+## IDE / editor folders
+.vscode/
+.idea/
+
+## pyenv
+.python-version
+
+## Docker files themselves (avoid recursive context)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+## Miscellaneous
+*.md
+*.log

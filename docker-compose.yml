@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  solarguard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: solarguard-app
+    image: solarguard:latest
+    restart: unless-stopped
+
+    ports:
+      - "3000:3000"      # host:container  – visit http://localhost:3000
+
+    environment:
+      - PORT=3000
+      - TF_CPP_MIN_LOG_LEVEL=3
+      - TF_ENABLE_ONEDNN_OPTS=0
+
+    # Mount the trained model at runtime so you don't have to rebuild
+    # the image every time you update weights.
+    volumes:
+      - ./Model:/app/Model:ro
+
+    # Basic resource guard – TF can be memory-hungry
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:3000/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s    # give TF time to load the model on first start
