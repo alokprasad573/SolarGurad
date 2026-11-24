@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap');
-        
-body { 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: radial-gradient(circle at 0% 0%, #f0fdf4 0%, #dcfce7 100%);
     color: #064e3b;
@@ -46,7 +50,7 @@ body {
     animation: spin 1s linear infinite;
 }
 
-@keyframes spin { 
-    0% { transform: rotate(0deg); } 
-    100% { transform: rotate(360deg); } 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

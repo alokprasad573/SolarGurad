@@ -1,33 +1,30 @@
-## Python artefacts
-__pycache__/
-*.py[cod]
-*.pyo
+# Node / Next.js build outputs
+node_modules/
+.next/
+out/
+npm-debug.log*
 
-## Virtual environments
+## Python & ML training artifacts (not needed in Next.js runtime image)
 .venv/
 venv/
 env/
-
-## Large data – not needed inside the image
+__pycache__/
+*.py[cod]
+*.pyo
 Data/
-
-## Jupyter notebooks & test artefacts
-NoteBooks/
 Test/
+model/
+NoteBooks/
+static/
 
-## Git metadata
+## Git & IDE metadata
 .git/
 .gitignore
 .gitattributes
-
-## IDE / editor folders
 .vscode/
 .idea/
 
-## pyenv
-.python-version
-
-## Docker files themselves (avoid recursive context)
+## Docker files themselves
 Dockerfile
 docker-compose.yml
 .dockerignore
@@ -35,3 +32,4 @@ docker-compose.yml
 ## Miscellaneous
 *.md
 *.log
+.env*.local

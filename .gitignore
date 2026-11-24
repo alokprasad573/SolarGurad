@@ -1,10 +1,21 @@
+# Node / Next.js
+/node_modules
+/.pnp
+.pnp.*
+/.next/
+/out/
 
-# Data & Models (Large files)
+# Python & Local ML Datasets / Weights
+.venv/
+__pycache__/
+*.py[cod]
 Data/
 Test/
+model/finetuned/*.h5
+model/finetuned/*.keras
 
-# Enviroments
-.venv/
-
-# Python bytecode
-__pycache__/
+# Misc
+.DS_Store
+*.pem
+npm-debug.log*
+.env*.local
