@@ -29,7 +29,7 @@ export default function HomePage() {
               <p className="text-[8px] uppercase font-bold text-emerald-200 leading-none mb-1">
                 Reliability
               </p>
-              <p className="text-xs font-black">82.98%</p>
+              <p className="text-xs font-black">82.89%</p>
             </div>
             <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
           </div>
